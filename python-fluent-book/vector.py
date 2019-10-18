@@ -24,9 +24,18 @@ class Vector:
         return Vector(self.x * scalar, self.y * scalar)
 
 
+# -----------------------------
+# Testes:
+# -----------------------------
 v1 = Vector( 2, 4) 
 v2 = Vector( 2, 1) 
-print(str(v1 + v2))
+print(v1 + v2)
 
+v = Vector( 3, 4) 
+print(abs( v))
+
+print(v * 3)
+
+print(abs( v * 3))
 
 
