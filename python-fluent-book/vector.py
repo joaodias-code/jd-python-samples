@@ -37,5 +37,6 @@ print(abs( v))
 print(v * 3)
 
 print(abs( v * 3))
+print(repr(v))
 
 
