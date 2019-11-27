@@ -19,7 +19,7 @@ class frenchdeck:
         return len(self._cards)
     
     def __getitem__(self, position): 
-        return self._cards[ position]
+        return self._cards[position]
 
        
 # -----------------------------
@@ -29,7 +29,7 @@ beer_card = Card('7', 'diamonds')
 print(beer_card )
 
 deck = frenchdeck() 
-len(deck)
+#len(deck)
 print(deck[0])
 print(deck[-1])
 
