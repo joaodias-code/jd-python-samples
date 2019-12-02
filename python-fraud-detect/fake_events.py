@@ -8,8 +8,12 @@ def DetectFakeEvent(event_name, event_code):
 
     #lista = [f.read()]
 
+    print('')
 
-    print(lista)
+
+def Filter(string, substr): 
+    return [str for str in string if
+             any(sub in str for sub in substr)] 
 
 
 #DetectFakeEvent('teste', 4)
@@ -17,11 +21,19 @@ event_name = 'Xpower Force funciona Preço boleto farmacia tomar onde comprar Xp
 list_name = event_name.split()
 print(list_name)
 
-f = open("D:\GIT\jd-python-samples\python-fraud-detect\suspicious_words.txt", "r")
-lista = [f.read()]
+fileName = "D:\\Joao\\GIT\\jd-python-samples\\python-fraud-detect\\black_list.txt"
+fileList = [line.rstrip('\n') for line in open(fileName, 'r')]
+print(fileList)
 
-np.array(lista)
-print(np.argwhere(list_name))
+
+#print(filter(lambda x: 'Forcecxsd' in x, list_name))
+
+matching = [s for s in fileList if any(xs in s for xs in list_name)]
+print(matching)
+
+print(Filter(fileList, list_name))
+
+
 
 # ler o arquivo, criar um dicionario com código do evento, quebrar json de pagamento
 
