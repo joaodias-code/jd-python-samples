@@ -7,6 +7,7 @@ s = 'bicycle'
 print(s[::3]) # pula de 3 em 3 = 'bye'
 print(s[::-1]) # traz todos mas ao contrário 
 print(s[::-2]) # traz ao contrário pulando de dois em dois
-print(s[2::2])
+print(s[2::2]) # começa da posição 2 e vai pulando de dois em dois
+
 
 
