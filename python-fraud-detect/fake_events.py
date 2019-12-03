@@ -11,27 +11,21 @@ def DetectFakeEvent(event_name, event_code):
     print('')
 
 
-def Filter(string, substr): 
-    return [str for str in string if
-             any(sub in str for sub in substr)] 
-
 
 #DetectFakeEvent('teste', 4)
 event_name = 'Xpower Force funciona Preço boleto farmacia tomar onde comprar XpowerForce?'
 list_name = event_name.split()
-print(list_name)
 
-fileName = "D:\\Joao\\GIT\\jd-python-samples\\python-fraud-detect\\black_list.txt"
+
+fileName = "python-fraud-detect\\black_list.txt"
 fileList = [line.rstrip('\n') for line in open(fileName, 'r')]
-print(fileList)
 
 
 #print(filter(lambda x: 'Forcecxsd' in x, list_name))
-
-matching = [s for s in fileList if any(xs in s for xs in list_name)]
+#fileList = ['casa', 'carro', 'carro de roça', 'casa no lago', 'caminhonete grande']
+#list_name = ['casa', 'carro']
+matching = [s for s in fileList if any(xs == s for xs in list_name)]
 print(matching)
-
-print(Filter(fileList, list_name))
 
 
 
