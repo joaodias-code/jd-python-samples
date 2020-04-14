@@ -21,9 +21,6 @@ fileName = "python-fraud-detect\\black_list.txt"
 fileList = [line.rstrip('\n') for line in open(fileName, 'r')]
 
 
-#print(filter(lambda x: 'Forcecxsd' in x, list_name))
-#fileList = ['casa', 'carro', 'carro de roça', 'casa no lago', 'caminhonete grande']
-#list_name = ['casa', 'carro']
 matching = [s for s in fileList if any(xs == s for xs in list_name)]
 print(matching)
 
